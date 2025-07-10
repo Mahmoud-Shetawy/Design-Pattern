@@ -19,7 +19,7 @@ public class Main {
         paymentProcessor.processPayment(new Order());
         * */
 
-        //bef_Use_observer
+        ///bef_Use_observer
         /*
         OnlineMarketPlace marketPlace = new OnlineMarketPlace();
         marketPlace.addUser(new Customer("Ahmed",true,true));
@@ -29,7 +29,7 @@ public class Main {
         marketPlace.addNewProduct(new Product("Laptop",20000));
         marketPlace.addNewOffer(new Offer("New offer with 20% discount for every items."));
         */
-        //Aft_Use_observer
+        ///Aft_Use_observer
      /*   OnlineMarketPlace onlineMarketPlace = new OnlineMarketPlace();
         Subscriber Mahmoud = new Customer("Mahmoud");
         Subscriber Shetawy = new Customer("Shetawy");
@@ -48,7 +48,7 @@ public class Main {
         onlineMarketPlace.addNewOffer(new Offer("offer with 20% discount for every items."));
         onlineMarketPlace.addNewJobOpening("Developer");*/
 
-        // bef_Use_Strategy
+        /// bef_Use_Strategy
 /*        Product wallet =new Product("Wallet",200.0);
         double walletPrice = wallet.calculatePrice(MemberShipType.REGULAR);
         System.out.println("Wallet Price is: " + walletPrice);
@@ -68,8 +68,8 @@ public class Main {
         checkout.processPayment(mobilePrice,PaymentMethod.BANK_TRANSFER);*/
 
 
-        // aft_Use_Strategy
-        Product wallet =new Product("Wallet",200.0,new RegularPricingStrategy());
+        /// aft_Use_Strategy
+      /*  Product wallet =new Product("Wallet",200.0,new RegularPricingStrategy());
         double walletPrice = wallet.calculatePrice();
         System.out.println(walletPrice);
 
@@ -89,6 +89,10 @@ public class Main {
         paypalCheckout.processPayment(jacketPrice);
 
         Checkout BankCheckout = new Checkout(new BankTransferPaymentStrategy());
-        BankCheckout.processPayment(mobilePrice);
+        BankCheckout.processPayment(mobilePrice);*/
+
+
+
+
     }
 }
