@@ -111,7 +111,7 @@ public class Main {
 
         System.out.println(textEditor.getContent());*/
 /// Aft_Use_Memento
-        TextEditor textEditor = new TextEditor();
+      /*  TextEditor textEditor = new TextEditor();
         History history = new History();
         textEditor.setContent("Hello World");
         history.saveHistoryState(textEditor.save());
@@ -124,6 +124,10 @@ public class Main {
 
         textEditor.setContent("new TextEditor");
         textEditor.restore(history.undo());
-        System.out.println(textEditor.getContent());
+        System.out.println(textEditor.getContent());*/
+
+
+
+
     }
 }
