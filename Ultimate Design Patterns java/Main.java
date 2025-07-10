@@ -1,5 +1,8 @@
 //import observer.afterUseObserver.*;
 //import strategy.Before_Using_Strategy.*;
+import Memento.After_Use.History;
+import Memento.After_Use.TextEditor;
+import Memento.After_Use.TextEditorState;
 import strategy.After_Using_Strategy.*;
 
 import java.util.logging.Logger;
@@ -91,8 +94,36 @@ public class Main {
         Checkout BankCheckout = new Checkout(new BankTransferPaymentStrategy());
         BankCheckout.processPayment(mobilePrice);*/
 
+/// bef_Use_Memento
+       /* TextEditor textEditor = new TextEditor();
+        textEditor.setContent("hello");
+        textEditor.save();
+
+        textEditor.setContent("world");
+        textEditor.save();
+
+        textEditor.setContent("hello Mahmoud");
+
+        textEditor.undo();
+        textEditor.undo();
+        textEditor.redo();
 
 
+        System.out.println(textEditor.getContent());*/
+/// Aft_Use_Memento
+        TextEditor textEditor = new TextEditor();
+        History history = new History();
+        textEditor.setContent("Hello World");
+        history.saveHistoryState(textEditor.save());
 
+        textEditor.setContent("Hello Sheto");
+        history.saveHistoryState(textEditor.save());
+
+        textEditor.setContent("Mahmoud");
+        history.saveHistoryState(textEditor.save());
+
+        textEditor.setContent("new TextEditor");
+        textEditor.restore(history.undo());
+        System.out.println(textEditor.getContent());
     }
 }
