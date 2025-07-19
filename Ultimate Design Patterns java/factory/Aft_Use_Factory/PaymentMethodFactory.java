@@ -22,7 +22,9 @@ public class PaymentMethodFactory {
 
             return new AmericanExpress(cardHolder,cardNumber,cvv,expiryDate) ;
 
-        }else {
+        } else if (cardType == CardTypes.PAYPAL) {
+            return new PayPal(cardHolder,cardNumber,cvv,expiryDate) ;
+        } else {
             throw new IllegalArgumentException("Invalid Card Type");
         }
 
